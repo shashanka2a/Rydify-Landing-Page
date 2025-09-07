@@ -325,13 +325,13 @@ export default function Home() {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8, delay: 0.4 }}
                                 >
-                                    Safe, Student-Only<br />
+                                    Expensive Uber or Crowded buses?<br />
                                     <motion.span
                                         className="text-teal-600 inline-flex items-center gap-3"
                                         whileHover={{ scale: 1.05 }}
                                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
                                     >
-                                        Ride Sharing 🚗🎓
+                                        Introducing Rydify 🚗
                                     </motion.span>
                                 </motion.h1>
 
