@@ -146,7 +146,7 @@ export default function Home() {
                 {/* Navigation - Slimmer Header */}
                 <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex justify-between items-center h-12">
+                        <div className="flex justify-between items-center h-16">
                             <motion.div
                                 className="flex items-center"
                                 whileHover={{ scale: 1.05 }}
@@ -348,7 +348,7 @@ export default function Home() {
                                         </div>
                                         <div>
                                             <p className="font-semibold text-gray-900 text-sm">Verified Students</p>
-                                            <p className="text-xs text-gray-600">.edu email & license check</p>
+                                            <p className="text-xs text-gray-600">.edu verify</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-sm border border-gray-100">
@@ -357,7 +357,7 @@ export default function Home() {
                                         </div>
                                         <div>
                                             <p className="font-semibold text-gray-900 text-sm">Cheaper Travel</p>
-                                            <p className="text-xs text-gray-600">Split costs with peers</p>
+                                            <p className="text-xs text-gray-600">Split costs</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-sm border border-gray-100">
@@ -366,7 +366,7 @@ export default function Home() {
                                         </div>
                                         <div>
                                             <p className="font-semibold text-gray-900 text-sm">Secure Rides</p>
-                                            <p className="text-xs text-gray-600">Escrow + OTP system</p>
+                                            <p className="text-xs text-gray-600">Ride tracking</p>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -1170,151 +1170,6 @@ export default function Home() {
                 </section>
                 */}
 
-                {/* Final CTA */}
-                <section className="py-20 bg-gradient-to-r from-teal-600 to-emerald-600 relative overflow-hidden">
-                    {/* Background Animation */}
-                    <div className="absolute inset-0">
-                        <motion.div
-                            className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full"
-                            animate={{
-                                scale: [1, 1.2, 1],
-                                opacity: [0.3, 0.5, 0.3]
-                            }}
-                            transition={{ duration: 4, repeat: Infinity }}
-                        />
-                        <motion.div
-                            className="absolute bottom-10 right-10 w-24 h-24 bg-white/10 rounded-full"
-                            animate={{
-                                scale: [1.2, 1, 1.2],
-                                opacity: [0.4, 0.6, 0.4]
-                            }}
-                            transition={{ duration: 3, repeat: Infinity }}
-                        />
-                        <motion.div
-                            className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/10 rounded-full"
-                            animate={{
-                                y: [0, -20, 0],
-                                opacity: [0.2, 0.4, 0.2]
-                            }}
-                            transition={{ duration: 5, repeat: Infinity }}
-                        />
-                    </div>
-
-                    <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
-                        <motion.h2
-                            className="text-4xl text-white mb-6"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                            viewport={{ once: true }}
-                        >
-                            Join 15,000+ Students Riding Smarter
-                        </motion.h2>
-                        <motion.p
-                            className="text-xl text-teal-100 mb-6"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            viewport={{ once: true }}
-                        >
-                            Skip expensive rideshares. Avoid crowded buses. Connect with verified classmates for safe, affordable rides.
-                        </motion.p>
-                        <motion.div
-                            className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-8 inline-block"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="flex items-center gap-4 text-white">
-                                <div className="flex items-center gap-2">
-                                    <Shield className="h-5 w-5" />
-                                    <span className="text-sm">College Email Required</span>
-                                </div>
-                                <div className="text-white/50">•</div>
-                                <div className="flex items-center gap-2">
-                                    <Check className="h-5 w-5" />
-                                    <span className="text-sm">Email Verification</span>
-                                </div>
-                                <div className="text-white/50">•</div>
-                                <div className="flex items-center gap-2">
-                                    <MapPin className="h-5 w-5" />
-                                    <span className="text-sm">GPS Tracking</span>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            className="flex flex-col sm:flex-row gap-4 justify-center"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.4 }}
-                            viewport={{ once: true }}
-                        >
-                            <motion.div
-                                whileHover={{ scale: 1.05, y: -5 }}
-                                whileTap={{ scale: 0.95 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                            >
-                                <Button className="bg-white text-teal-600 hover:bg-gray-100 text-lg py-6 px-8 shadow-lg hover:shadow-xl transition-shadow">
-                                    <div className="flex items-center gap-2">
-                                        <Zap className="h-5 w-5" />
-                                        Start Saving Now
-                                    </div>
-                                </Button>
-                            </motion.div>
-                            <motion.div
-                                whileHover={{ scale: 1.05, y: -5 }}
-                                whileTap={{ scale: 0.95 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                            >
-                                <Button className="bg-white/20 text-white border border-white/30 hover:bg-white/30 text-lg py-6 px-8 shadow-lg hover:shadow-xl transition-shadow">
-                                    <div className="flex items-center gap-2">
-                                        <Search className="h-5 w-5" />
-                                        Browse Rides
-                                    </div>
-                                </Button>
-                            </motion.div>
-                        </motion.div>
-
-                        <motion.p
-                            className="text-teal-200 mt-6 text-sm"
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 0.8, delay: 0.6 }}
-                            viewport={{ once: true }}
-                        >
-                            Free to join • .edu email required • Available 24/7 for students
-                        </motion.p>
-
-                        {/* Interactive floating elements */}
-                        <motion.div
-                            className="mt-8 flex justify-center gap-8"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.8 }}
-                            viewport={{ once: true }}
-                        >
-                            {[
-                                { icon: Shield, label: "Secure" },
-                                { icon: Zap, label: "Fast" },
-                                { icon: Users, label: "Community" }
-                            ].map((feature, index) => (
-                                <div
-                                    key={index}
-                                    className="text-center"
-                                >
-                                    <div
-                                        className="bg-white/20 p-3 rounded-full mx-auto mb-2"
-                                    >
-                                        <feature.icon className="h-6 w-6 text-white" />
-                                    </div>
-                                    <p className="text-teal-200 text-sm">{feature.label}</p>
-                                </div>
-                            ))}
-                        </motion.div>
-                    </div>
-                </section>
 
                 {/* Footer */}
                 <footer className="bg-gray-900 text-gray-300 py-8 sm:py-12">
