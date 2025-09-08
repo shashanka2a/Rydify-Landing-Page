@@ -211,7 +211,10 @@ export default function Home() {
                                     <Button
                                         variant="outline"
                                         className="text-teal-600 border-teal-600 hover:bg-teal-50"
-                                        onClick={() => trackButtonClick('Sign In', 'Navigation')}
+                                        onClick={() => {
+                                            trackButtonClick('Sign In', 'Navigation');
+                                            window.open('https://www.rydify.app/auth/login?redirect=%2Fprofile', '_blank');
+                                        }}
                                     >
                                         Sign In
                                     </Button>
@@ -219,7 +222,10 @@ export default function Home() {
                                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                     <Button
                                         className="bg-teal-600 hover:bg-teal-700"
-                                        onClick={() => trackButtonClick('Download App', 'Navigation')}
+                                        onClick={() => {
+                                            trackButtonClick('Download App', 'Navigation');
+                                            window.open('https://www.rydify.app/rides', '_blank');
+                                        }}
                                     >
                                         Download App
                                     </Button>
@@ -254,13 +260,19 @@ export default function Home() {
                                     <Button
                                         variant="outline"
                                         className="text-teal-600 border-teal-600 hover:bg-teal-50"
-                                        onClick={() => trackButtonClick('Sign In', 'Mobile Navigation')}
+                                        onClick={() => {
+                                            trackButtonClick('Sign In', 'Mobile Navigation');
+                                            window.open('https://www.rydify.app/auth/login?redirect=%2Fprofile', '_blank');
+                                        }}
                                     >
                                         Sign In
                                     </Button>
                                     <Button
                                         className="bg-teal-600 hover:bg-teal-700"
-                                        onClick={() => trackButtonClick('Download App', 'Mobile Navigation')}
+                                        onClick={() => {
+                                            trackButtonClick('Download App', 'Mobile Navigation');
+                                            window.open('https://www.rydify.app/rides', '_blank');
+                                        }}
                                     >
                                         Download App
                                     </Button>
@@ -397,7 +409,10 @@ export default function Home() {
                                     >
                                         <Button
                                             className="bg-teal-600 hover:bg-teal-700 text-base sm:text-lg py-4 sm:py-6 px-6 sm:px-8 shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto btn-pill"
-                                            onClick={() => trackButtonClick('Get Started Free', 'Hero Section')}
+                                            onClick={() => {
+                                                trackButtonClick('Get Started Free', 'Hero Section');
+                                                window.open('https://www.rydify.app/auth/login?redirect=%2Fdriver%2Fonboarding', '_blank');
+                                            }}
                                         >
                                             Get Started Free
                                         </Button>
@@ -409,7 +424,10 @@ export default function Home() {
                                         <Button
                                             variant="outline"
                                             className="text-teal-600 border-teal-600 hover:bg-teal-50 text-base sm:text-lg py-4 sm:py-6 px-6 sm:px-8 w-full sm:w-auto btn-pill transition-all duration-300"
-                                            onClick={() => trackButtonClick('Find Rides Now', 'Hero Section')}
+                                            onClick={() => {
+                                                trackButtonClick('Find Rides Now', 'Hero Section');
+                                                window.open('https://www.rydify.app/rides', '_blank');
+                                            }}
                                         >
                                             Find Rides Now
                                         </Button>
@@ -1271,7 +1289,10 @@ export default function Home() {
                 >
                     <Button
                         className="bg-teal-600 hover:bg-teal-700 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-full px-6 py-4 text-lg font-semibold"
-                        onClick={() => trackButtonClick('Floating CTA', 'Floating Button')}
+                        onClick={() => {
+                            trackButtonClick('Floating CTA', 'Floating Button');
+                            window.open('https://www.rydify.app/auth/login?redirect=%2Fdriver%2Fonboarding', '_blank');
+                        }}
                     >
                         <div className="flex items-center gap-2">
                             🚗 Start a Ride
@@ -1294,7 +1315,10 @@ export default function Home() {
                         <Button
                             size="sm"
                             className="bg-white text-teal-600 hover:bg-gray-100 font-semibold"
-                            onClick={() => trackButtonClick('Sticky Banner CTA', 'Sticky Banner')}
+                            onClick={() => {
+                                trackButtonClick('Sticky Banner CTA', 'Sticky Banner');
+                                window.open('https://www.rydify.app/auth/login?redirect=%2Fdriver%2Fonboarding', '_blank');
+                            }}
                         >
                             Join
                         </Button>
