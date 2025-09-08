@@ -1278,9 +1278,9 @@ export default function Home() {
                     </div>
                 </footer>
 
-                {/* Floating CTA Button */}
+                {/* Floating CTA Button - Hidden on mobile to avoid conflict with sticky banner */}
                 <motion.div
-                    className="fixed bottom-6 right-6 z-50"
+                    className="fixed bottom-6 right-6 z-50 hidden md:block"
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 2, duration: 0.5 }}
@@ -1308,13 +1308,13 @@ export default function Home() {
                     transition={{ delay: 3, duration: 0.5 }}
                 >
                     <div className="flex items-center justify-between max-w-sm mx-auto">
-                        <div className="flex items-center gap-2">
-                            <span className="text-xl">🚗</span>
-                            <span className="font-semibold">Join Rydify with your .edu email</span>
+                        <div className="flex items-center gap-2 flex-1 min-w-0">
+                            <span className="text-xl flex-shrink-0">🚗</span>
+                            <span className="font-semibold text-sm truncate">Join Rydify with your .edu email</span>
                         </div>
                         <Button
                             size="sm"
-                            className="bg-white text-teal-600 hover:bg-gray-100 font-semibold"
+                            className="bg-white text-teal-600 hover:bg-gray-100 font-semibold ml-3 flex-shrink-0"
                             onClick={() => {
                                 trackButtonClick('Sticky Banner CTA', 'Sticky Banner');
                                 window.open('https://www.rydify.app/auth/login?redirect=%2Fdriver%2Fonboarding', '_blank');
