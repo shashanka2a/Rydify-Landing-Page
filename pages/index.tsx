@@ -1220,50 +1220,79 @@ export default function Home() {
                                 </p>
                             </motion.div>
 
-                            {[
-                                {
-                                    title: "Company",
-                                    links: ["About", "Careers", "Press", "Blog"]
-                                },
-                                {
-                                    title: "Support",
-                                    links: ["Help Center", "Safety", "Contact", "Terms"]
-                                },
-                                {
-                                    title: "Connect",
-                                    links: ["Facebook", "Instagram", "Twitter", "LinkedIn"]
-                                }
-                            ].map((section, sectionIndex) => (
-                                <motion.div
-                                    key={section.title}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.1 * (sectionIndex + 2) }}
-                                    viewport={{ once: true }}
-                                >
-                                    <h4 className="text-white mb-4">{section.title}</h4>
-                                    <ul className="space-y-2">
-                                        {section.links.map((link, linkIndex) => (
-                                            <motion.li
-                                                key={link}
-                                                initial={{ opacity: 0, x: -10 }}
-                                                whileInView={{ opacity: 1, x: 0 }}
-                                                transition={{ duration: 0.5, delay: 0.1 * (sectionIndex + 2) + 0.05 * linkIndex }}
-                                                viewport={{ once: true }}
-                                            >
-                                                <motion.a
-                                                    href="#"
-                                                    className="hover:text-teal-400 transition-colors"
-                                                    whileHover={{ x: 5 }}
-                                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                                                >
-                                                    {link}
-                                                </motion.a>
-                                            </motion.li>
-                                        ))}
-                                    </ul>
-                                </motion.div>
-                            ))}
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, delay: 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <h4 className="text-white mb-4">Quick Links</h4>
+                                <ul className="space-y-2">
+                                    <motion.li
+                                        initial={{ opacity: 0, x: -10 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.5, delay: 0.1 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <motion.a
+                                            href="#how-it-works"
+                                            className="hover:text-teal-400 transition-colors"
+                                            whileHover={{ x: 5 }}
+                                            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                        >
+                                            How it works
+                                        </motion.a>
+                                    </motion.li>
+                                    <motion.li
+                                        initial={{ opacity: 0, x: -10 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.5, delay: 0.15 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <motion.a
+                                            href="#app"
+                                            className="hover:text-teal-400 transition-colors"
+                                            whileHover={{ x: 5 }}
+                                            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                        >
+                                            App Features
+                                        </motion.a>
+                                    </motion.li>
+                                </ul>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                viewport={{ once: true }}
+                            >
+                                <h4 className="text-white mb-4">Get Started</h4>
+                                <div className="space-y-3">
+                                    <motion.button
+                                        className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg transition-colors w-full text-left"
+                                        onClick={() => {
+                                            trackButtonClick('Footer CTA', 'Footer');
+                                            window.open('https://www.rydify.app/auth/login?redirect=%2Fdriver%2Fonboarding', '_blank');
+                                        }}
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                    >
+                                        Join as Driver
+                                    </motion.button>
+                                    <motion.button
+                                        className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition-colors w-full text-left"
+                                        onClick={() => {
+                                            trackButtonClick('Footer CTA', 'Footer');
+                                            window.open('https://www.rydify.app/rides', '_blank');
+                                        }}
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                    >
+                                        Find Rides
+                                    </motion.button>
+                                </div>
+                            </motion.div>
                         </motion.div>
 
                         <motion.div
